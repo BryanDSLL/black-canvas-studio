@@ -1,12 +1,9 @@
+/* Disable CSS warnings for Tailwind directives */
+/* stylelint-disable at-rule-no-unknown */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
+/* stylelint-enable at-rule-no-unknown */
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -85,4 +82,14 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Adjust scroll position to account for fixed navbar */
+section {
+  scroll-margin-top: 80px;
 }
